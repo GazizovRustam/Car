@@ -9,13 +9,16 @@ def main():
     #totalPriceOil = getMonthPriceOil(priceOil)
     totalPetrol = getTotalPetrol(valueKilometer)
     totalYearPricePetrol = getYearPricePetrol(pricePetrol, totalPetrol)
+    totalMonthPriceInsurance = getMonthPrice(priceInsurance, year)
     totalMonthPricePetrol = getMonthPrice(totalYearPricePetrol, year)
     totalMonthPriceOil = getMonthPrice(priceOil, year)
+
     print('')
     print('Total car expenses!')
     print('\t', '\t', 'Month ', '\t', 'Year')
     print('Petrol: ', format(totalMonthPricePetrol, ',.1f'), '\t', format(totalYearPricePetrol, ',.1f'))
     print('Oil: ', '\t', format(totalMonthPriceOil, ',.1f'), '\t''\t', format(priceOil, ',.1f'))
+    print('Insurance: ', '\t', format(totalMonthPriceInsurance, ',.1f'))
     return
 
 #def getMonthPriceOil(priceOil):
@@ -33,6 +36,7 @@ def getYearPricePetrol(pricePetrol, totalPetrol):
 def getTotalPetrol(valueKilometer):
     value = valueKilometer / 100 * 9
     return value
+
 
 
 
