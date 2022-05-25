@@ -38,6 +38,4 @@ def getTotalPetrol(valueKilometer):
     return value
 
 
-
-
 print(main())
